@@ -13,8 +13,8 @@
         - Depois de fazer a instalação, crie uma pasta no seu projeto chamada database e dentro dessa pasta crie o arquivo db.sqlite
         - No beekeeper crie um novo banco de dados e procure pelo arquivo db.sqlite do seu projeto. 
 
-    > Alteração no tsconfig.json
-        - Precisamos descomentar o experimentalDecorators, emitDecoratorMetadata e allowJs no tsconfig.json
+    >Alteração no tsconfig.json
+  -Precisamos descomentar o experimentalDecorators, emitDecoratorMetadata e allowJs no tsconfig.json
 
     > Configuração do TypeORM 
         > https://typeorm.io/data-source
