@@ -5,7 +5,7 @@
 - ORM (Object relational Mapper) é uma técnica de mapeamento de objeto relacional que nos permite fazer uma relação do objeto com os dados que os mesmos representam.
         - Exemplo de ORM: TypeOrm e Primsa.
 
-    - npm i typeorm reflect-metadata sqlite3
+            - npm i typeorm reflect-metadata sqlite3
 
     > Iremos utilizar o beekeeper Studio para conseguirmos visualizar o nosso Banco de dados.
   
