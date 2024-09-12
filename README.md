@@ -61,6 +61,6 @@ Crie um DataSource na pasta de database, pode pegar o codigo que está na propri
 
 **Oque são entities e repositories?**
   
--Entities são objetos que representam conceitos do domínio da aplicação e possuem uma identidade única que persiste ao longo do tempo. Cada entidade corresponde a uma tabela no banco de dados, e cada instância de uma entidade representa uma linha nessa tabela. Por exemplo, em um sistema de gerenciamento de biblioteca, uma entidade poderia ser um “Livro” com atributos como título, autor e ISBN.
+Entities são objetos que representam conceitos do domínio da aplicação e possuem uma identidade única que persiste ao longo do tempo. Cada entidade corresponde a uma tabela no banco de dados, e cada instância de uma entidade representa uma linha nessa tabela. Por exemplo, em um sistema de gerenciamento de biblioteca, uma entidade poderia ser um “Livro” com atributos como título, autor e ISBN.
  
--Repositories são responsáveis por mediar o acesso aos dados persistidos, desacoplando a lógica de acesso a dados da lógica de negócios. Eles atuam como uma coleção de objetos de domínio em memória e fornecem métodos para adicionar, remover e recuperar esses objetos. Isso permite que a camada de negócios interaja com os dados sem precisar conhecer os detalhes de como esses dados são armazenados ou recuperados
+Repositories são responsáveis por mediar o acesso aos dados persistidos, desacoplando a lógica de acesso a dados da lógica de negócios. Eles atuam como uma coleção de objetos de domínio em memória e fornecem métodos para adicionar, remover e recuperar esses objetos. Isso permite que a camada de negócios interaja com os dados sem precisar conhecer os detalhes de como esses dados são armazenados ou recuperados
