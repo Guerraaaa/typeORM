@@ -18,10 +18,12 @@
         - No beekeeper crie um novo banco de dados e procure pelo arquivo db.sqlite do seu projeto. 
 
     >Alteração no tsconfig.json
-  -Precisamos descomentar o experimentalDecorators, emitDecoratorMetadata e allowJs no tsconfig.json
+    
+-Precisamos descomentar o experimentalDecorators, emitDecoratorMetadata e allowJs no tsconfig.json
 
-    > Configuração do TypeORM 
-        > https://typeorm.io/data-source
+> Configuração do TypeORM
+> 
+  https://typeorm.io/data-source
   
   -Crie um DataSource na pasta de database, pode pegar o codigo que está na propria doc do typeORM apenas faça algumas modificações para se adequar à database. Exemplo de configuração:
   
