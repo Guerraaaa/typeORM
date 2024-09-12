@@ -5,7 +5,7 @@
 - ORM (Object relational Mapper) é uma técnica de mapeamento de objeto relacional que nos permite fazer uma relação do objeto com os dados que os mesmos representam.
         - Exemplo de ORM: TypeOrm e Primsa.
 
-            - npm i typeorm reflect-metadata sqlite3
+            npm i typeorm reflect-metadata sqlite3
 
     > Iremos utilizar o beekeeper Studio para conseguirmos visualizar o nosso Banco de dados.
   
@@ -27,7 +27,7 @@ Precisamos descomentar o experimentalDecorators, emitDecoratorMetadata e allowJs
   
 Crie um DataSource na pasta de database, pode pegar o codigo que está na propria doc do typeORM apenas faça algumas modificações para se adequar à database. Exemplo de configuração:
   
-        - {type: "sqlite", database: "./src/database/db.sqlite",  migrations: ["./src/database/migrations/*.ts"]}
+        {type: "sqlite", database: "./src/database/db.sqlite",  migrations: ["./src/database/migrations/*.ts"]}
 
   Adicionar o script no package.json
   -     "typeorm": "typeorm-ts-node-common.js",
@@ -44,7 +44,7 @@ Crie um DataSource na pasta de database, pode pegar o codigo que está na propri
 
   - Caso queira adicionar uma tabela, dentro da classe up faremos o seguinte:
   
-                -await queryRunner.createTable(new Table({
+                await queryRunner.createTable(new Table({
                     name: "users",
                     columns: [{name: "id_user", type: "string", isPrimary: true},{name: "name", type: "string", isNullable: false},{name: "email", type: "string",isNullable: false, isUnique: true},{name: "password", type: "string", isNullable: false},]
                 }))
