@@ -1,34 +1,20 @@
-const db = [
-  {
-    name: "Mario",
-    idade: 19,
-  },
-];
-
-export interface User {
-  name: string;
-  idade: number;
-}
+import { AppDataSource } from "../database";
+import { User } from "../entities/User";
+import { UserRepository } from "../repositiories/UserRepository";
 
 export class UserService {
-  db: User[];
+  private userRepository: UserRepository;
 
-  constructor(database = db) {
-    this.db = database;
+  constructor(
+    userRepository = new UserRepository(AppDataSource.manager)
+  ) {
+    this.userRepository = userRepository
   }
-  createUser = (name: string, idade: number) => {
-    const user = { name, idade };
-    this.db.push(user);
-    console.log("Database atualizada - ", this.db);
+  createUser = async (name: string, email: string, password: string):Promise<User> => {
+    const user = new User(name, email, password)
+
+    return this.userRepository.createUser(user)
   };
 
-  getAllData = () => {
-    console.log(this.db);
-    return this.db;
-  };
-
-  deleteUser = (name: string) => {
-    const deleteUser = db.filter((el) => el.name !== name);
-    return deleteUser;
-  };
+  getUser = () => {};
 }

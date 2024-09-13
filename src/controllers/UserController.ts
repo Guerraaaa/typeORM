@@ -9,26 +9,16 @@ export class UserController {
 
   //Regras de validações e operações.
   createUser = (req: Request, res: Response) => {
-    const userService = new UserService();
-    const user = req.body;
+    const user = req.body
 
-    if (!user.name)
+    if (!user.name || !user.email || !user.password )
       res.status(400).json({ message: "Bad Request! Name is required." });
 
-    userService.createUser(user.name, user.idade);
+    this.userservice.createUser(user.name, user.email, user.password);
     return res.status(201).json({ message: "Usuario criado" });
   };
-  getAllDate = (req: Request, res: Response) => {
-    const userService = new UserService();
-    const db = userService.getAllData();
-    return res.status(200).json(db);
+  getUser = (req: Request, res: Response) => {
+    return res.status(200);
   };
-  deleteUser = (req: Request, res: Response) => {
-    const paramsUser = req.params;
-    const userService = new UserService();
-    const db = userService.deleteUser(paramsUser.name);
-    console.log(db);
 
-    return res.status(201).json(db);
-  };
 }
